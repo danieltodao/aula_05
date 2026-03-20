@@ -27,7 +27,7 @@ public class CategoriaService {
         ));
     }
 
-    public List<CategoriaResponse> getCategoria() {
+    public List<CategoriaResponse> listarTodos() {
         return categoria;
     }
 

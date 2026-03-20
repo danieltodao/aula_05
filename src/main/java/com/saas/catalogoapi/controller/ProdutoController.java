@@ -60,7 +60,7 @@ public class ProdutoController {
     public ResponseEntity<ProdutoResponse> criar(@RequestBody ProdutoRequest request) {
         ProdutoResponse criado = produtoService.criar(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(criado);
-    }
+}
 
     /**
      * PUT /api/v1/produtos/{id}
