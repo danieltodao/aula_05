@@ -6,6 +6,7 @@ public record CategoriaResponse(
         Long id,
         String nome,
         String descricao,
+        Boolean ativo,
         LocalDateTime criadoEm
 ) {
 }
