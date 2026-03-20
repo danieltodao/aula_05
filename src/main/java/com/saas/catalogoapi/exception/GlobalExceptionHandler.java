@@ -23,10 +23,10 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * Trata a excecao de produto nao encontrado, retornando HTTP 404.
+     * Trata a excecao de categoria nao encontrado, retornando HTTP 404.
      */
-    @ExceptionHandler(ProdutoNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleProdutoNotFound(ProdutoNotFoundException ex) {
+    @ExceptionHandler(CategoriaNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleProdutoNotFound(CategoriaNotFoundException ex) {
         ErrorResponse erro = new ErrorResponse(
                 HttpStatus.NOT_FOUND.value(),
                 ex.getMessage(),
