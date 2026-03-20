@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/v1/categorias")
 @Tag(name = "Categorias", description = "Endpoints para criar categorias")
 public class CategoriaController {
 
@@ -26,9 +26,9 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaService.listarTodos());
     }
 
-    @GetMapping({"/id}")
+    @GetMapping("/{id}")
     @Operation(summary = "Buscar categoria por id", description = "Retorna umaa categoria pelo identificador")
-    public ResponseEntity<List<CategoriaResponse>> buscarporID(@PathVariable Long id) {
+    public ResponseEntity<CategoriaResponse> buscarporID(@PathVariable Long id) {
         return ResponseEntity.ok(categoriaService.buscarporID(id));
     }
 
